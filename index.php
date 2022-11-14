@@ -53,7 +53,7 @@ while($row=mysqli_fetch_assoc($cat_res)){
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                 <li class="active"><a href="index.php">Home</a></li>
-                <li class="active"><a href="about.html">about</a></li>
+                <li class="active"><a href="#">about</a></li>
                 <?php
                     foreach($cat_arr as $list){
                       ?>
