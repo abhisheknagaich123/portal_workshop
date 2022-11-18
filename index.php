@@ -31,19 +31,8 @@ while($row=mysqli_fetch_assoc($cat_res)){
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-  
-  <div class="site-wrap">
 
-    <div class="site-mobile-menu">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
-    
-    <header class="site-navbar py-3" role="banner">
+ <header class="site-navbar py-3" role="banner">
       <div class="container-fluid">
         <div class="row align-items-center">
           <div class="col-11 col-xl-2">
@@ -72,41 +61,69 @@ while($row=mysqli_fetch_assoc($cat_res)){
         </div>
       </div>
     </header>
-<?php
+ 
+    
+   <?php
 $get_product=get_product($con,'','');
-
-
-
   ?>
     
-    <div class="site-section site-hero">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-10">
-            <span class="d-block mb-3 caption" data-aos="fade-up" data-aos-delay="100">Conference 2020</span>
-            <h1 class="d-block mb-4" data-aos="fade-up" data-aos-delay="200"> <?php echo $get_product['0']['workshop_name']?></h1>
-            <span class="d-block mb-5 caption" data-aos="fade-up" data-aos-delay="300"><?php echo $get_product['0']['date']?> GLA University Mathura</span>
-            <a href="#" class="btn-custom" data-aos="fade-up" data-aos-delay="400"><span>Buy Tickets</span></a>
-          </div>
-        </div>
+
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a href="#"><img src="<?php echo PRODUCT_IMAGE_SITE_PATH.$get_product['0']['image']?>" class="d-block w-100" style="width: 70%; height: 600px;" alt="..."></a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5><?php echo $get_product['0']['workshop_name']?></h5>
+
       </div>
     </div>
+    <div class="carousel-item">
+<a href="#"><img src="<?php echo PRODUCT_IMAGE_SITE_PATH.$get_product['1']['image']?>" class="d-block w-100" style="width: 70%; height: 600px;" alt="..."></a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5><?php echo $get_product['1']['workshop_name']?></h5>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+<a href="#"><img src="<?php echo PRODUCT_IMAGE_SITE_PATH.$get_product['2']['image']?>" class="d-block w-100" style="width: 70%; height: 600px;" alt="..."></a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5><?php echo $get_product['2']['workshop_name']?></h5>
+        
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </button>
+</div>
+
 
       <div class="site-section">
       <div class="container">
         
-         <?php
+                           <?php
                             $get_product=get_product($con,5);
                             foreach($get_product as $list){
                             ?>
          <div class="row align-items-center speaker">
           
-          <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
+          <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
             <img src="<?php echo PRODUCT_IMAGE_SITE_PATH.$list['image']?>" alt="Image" class="img-fluid">
           </div>
-          <div class="col-lg-6 ml-auto">
-            <h2 class="text-white mb-4 name" data-aos="fade-right" data-aos-delay="200"><?php echo $list['workshop_name']?></h2>
-            <div class="bio pl-lg-5">
+          <div class="bio pl-lg-5">
+                       <div class="bio pl-lg-5">
+              <span class="text-uppercase text-primary d-block mb-3" data-aos="fade-right" data-aos-delay="300"><?php echo $list['workshop_name']?></span>
               <span class="text-uppercase text-primary d-block mb-3" data-aos="fade-right" data-aos-delay="300"><?php echo $list['categories']?></span>
               <p class="mb-4" data-aos="fade-right" data-aos-delay="400"><?php echo $list['description']?></p>
               <p data-aos="fade-right" data-aos-delay="500">
