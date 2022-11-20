@@ -37,7 +37,7 @@ if(isset($_POST['submit'])){
 	$description=get_safe_value($con,$_POST['description']);
 
 	
-	$res=mysqli_query($con,"select * from product where user_name='$user_name'");
+	$res=mysqli_query($con,"select * from product where workshop_name='$workshop_name'");
 	$check=mysqli_num_rows($res);
 	if($check>0){
 		if(isset($_GET['id']) && $_GET['id']!=''){
@@ -48,8 +48,10 @@ if(isset($_POST['submit'])){
 				$msg="Product already exist";
 			}
 		}else{
-			$msg="Product already exist";
+			$msg="Product already exist123";
 		}
+		
+
 	}
 	
 	if($_GET['id']==0){

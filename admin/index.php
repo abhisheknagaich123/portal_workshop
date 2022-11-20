@@ -1,3 +1,7 @@
+ 
+
+
+
 <?php
 require('top_inc.php');
 ?>
@@ -7,7 +11,7 @@ require('top_inc.php');
       <div class="col-xl-12">
        <div class="card">
         <div class="card-body">
-           <h4 class="box-title">Dashboard </h4>
+           <h4 class="box-title"><?php echo($_SESSION['username']);  ?> </h4>
         </div>
       </div>
       </div>

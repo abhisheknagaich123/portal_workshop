@@ -1,3 +1,5 @@
+
+
 <?php
 require('connection.php');
 require('function.php');
@@ -8,7 +10,7 @@ require('function.php');
    <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Dashboard Page</title>
+      <title>workshop--Dashboard</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="assets/css/normalize.css">
       <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -52,7 +54,7 @@ require('function.php');
                   <div class="user-area dropdown float-right">
                      <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome Admin</a>
                      <div class="user-menu dropdown-menu">
-                        <a class="nav-link" href="#"><i class="fa fa-power-off"></i>Logout</a>
+                        <a class="nav-link" href="Login.php"><i class="fa fa-power-off"></i>Logout</a>
                      </div>
                   </div>
                </div>

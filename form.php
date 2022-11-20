@@ -1,4 +1,8 @@
 
+
+
+
+
 <?php 
 require('connection.php');
 require('function.php');
@@ -50,7 +54,7 @@ if(isset($_GET['id'])){
   href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css"
   rel="stylesheet"
 />
-    <title>Hello, world!</title>
+    <title>Workshop Portal</title>
   </head>
   <body>
   <?php 
@@ -68,12 +72,12 @@ if(isset($_GET['id'])){
 
                 <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
 
-                <form class="mx-1 mx-md-4" action="new.php" method="post">
+                <form class="mx-1 mx-md-4" action="email.php" method="post">
 
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="form3Example1c" class="form-control" name="name" />
+                      <input type="text" id="form3Example1c" class="form-control" name="name"  required />
                       <label class="form-label" for="form3Example1c">Your Name</label>
                     </div>
                   </div>
@@ -81,7 +85,7 @@ if(isset($_GET['id'])){
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="email" id="form3Example3c" class="form-control" name="email" />
+                      <input type="email" id="form3Example3c" class="form-control" name="email" required />
                       <label class="form-label" for="form3Example3c">Your Email</label>
                     </div>
                   </div>
@@ -89,7 +93,7 @@ if(isset($_GET['id'])){
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-phone fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="form3Example4c" class="form-control" name="contact" />
+                      <input type="text" id="form3Example4c" class="form-control" name="contact" title="please provide valid number" pattern="[1-9]{1}[0-9]{9}" required />
                       <label class="form-label" for="form3Example4c">contact</label>
                     </div>
                   </div>

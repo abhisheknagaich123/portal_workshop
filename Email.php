@@ -1,3 +1,4 @@
+
 <?php
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -22,7 +23,7 @@ $event=$_POST['event'] ;
         echo "You are not connect to the server";
     }
 
-    $res=mysqli_query($conn,"select * from student_reg_data  where email='$email'");
+    $res=mysqli_query($conn,"select * from student_reg  where email='$email'");
     $check=mysqli_num_rows($res);
     if ($check>0) {
        
@@ -38,7 +39,7 @@ $event=$_POST['event'] ;
        
     }
     else{
-        $sql = "INSERT INTO student_reg_data (username,email, contact,workshop_name)
+        $sql = "INSERT INTO student_reg (username,email, contact,workshop_name)
 VALUES ('$fname', '$email', '$cont','$event')";
 $query=mysqli_query($conn, $sql);
 $mail = new PHPMailer(true);
@@ -65,7 +66,7 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Workshop Portal Registration';
-    $mail->Body    = "workshopName: $event <br> name:$fname <br>";
+    $mail->Body    = "Workshop Name: $event <br> username:$fname <br> contact=$cont<br>";
    
 
     $mail->send();
