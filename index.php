@@ -40,7 +40,7 @@ while($row=mysqli_fetch_assoc($cat_res)){
   rel="stylesheet"
 />
 
-    <title>Hello, world!</title>
+    <title>Workshop Portal</title>
   </head>
   <body  style="background-color:  #FFB6C1">
 <?php 
@@ -92,7 +92,7 @@ $get_product=get_product($con,'','');
 </div>
 
                             <?php
-                            $get_product=get_product($con,5);
+                            $get_product=get_product($con,10);
                             foreach($get_product as $list){
                             ?>
 
