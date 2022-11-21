@@ -119,7 +119,7 @@ if(isset($_GET['id'])){
               </div>
               <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                <img src="https://media.istockphoto.com/id/1357113855/photo/young-african-american-woman-holding-books-and-notepad-in-hands.jpg?b=1&s=170667a&w=0&k=20&c=Zp_pUzVL4R5r5fJ5pF2QtRlOHtmcCV7_E70nB-5My3M="
+                <img src="<?php echo PRODUCT_IMAGE_SITE_PATH.$get_product['0']['image']?>"
                   class="img-fluid" alt="Sample image">
 
               </div>

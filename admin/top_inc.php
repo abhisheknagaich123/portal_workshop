@@ -34,6 +34,9 @@ require('function.php');
                   <li class="menu-item-has-children dropdown">
                      <a href="product.php" > workshop Master</a>
                   </li>
+                  <li class="menu-item-has-children dropdown">
+                     <a href="user.php" > User Data</a>
+                  </li>
               
               
                </ul>
