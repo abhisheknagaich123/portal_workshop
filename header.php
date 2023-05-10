@@ -12,7 +12,7 @@
     <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center" >
       <a class="mr-5 hover:text-red-8000"><button>Home</button></a>
       <a class="mr-5 hover:text-red-8000"><button>About</button></a>
-      <a class="mr-5 hover:text-red-8000"><button>Contact</button></a>
+      <a class="mr-5 hover:text-red-8000"><button>Contacts</button></a>
       
     </nav>
    
