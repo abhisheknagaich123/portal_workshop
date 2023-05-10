@@ -112,7 +112,7 @@ $get_product=get_product($con,'','');
       </div>
     </div>
     <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-      <img class="object-cover object-center rounded" alt="hero" src="<?php echo PRODUCT_IMAGE_SITE_PATH.$list['image']?>">
+      <img class="object-cover object-center rounded" alt="her1o" src="<?php echo PRODUCT_IMAGE_SITE_PATH.$list['image']?>">
     </div>
   </div>
 </section>
