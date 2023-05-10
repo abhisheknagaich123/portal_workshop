@@ -20,7 +20,7 @@ if(isset($_GET['id'])){
 }else{
   ?>
   <script>
-    alert("Email already exist!!!!!!");
+    alert("Email already exist!!!!!!!");
  
   </script>
   <?php
